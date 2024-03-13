@@ -10,7 +10,7 @@ import ShoppingBag from "./assets/shopping-bag.png";
 import Hamburger from "../hamburger";
 
 function Navbar() {
-  const [active, setActive] = useState(false);
+    const [active, setActive] = useState(false);
 
   const handleHamburger = () => {
     setActive(!active);

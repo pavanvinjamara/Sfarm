@@ -54,6 +54,7 @@ function Home() {
           </SplideTrack>
         </div>
       </Splide>
+      <div>Snehal</div>
     </div>
   );
 }

@@ -57,6 +57,7 @@ function Home() {
         </div>
       </Splide>
       <div>Snehal</div>
+      <div>Zygal</div>
     </div>
   );
 }

@@ -10,6 +10,7 @@ import "@splidejs/react-splide/css/sea-green";
 
 // or only core styles
 import "@splidejs/react-splide/css/core";
+import Navbar from "../../components/Navbar";
 function Home() {
   const options = {
     arrows: false,
@@ -22,11 +23,12 @@ function Home() {
   };
   return (
     <div className="overflow-hidden">
+      <Navbar />
       <Splide
         options={options}
         aria-labelledby="autoplay-example-heading"
         hasTrack={false}
-		className="!p-0"
+        className="!p-0"
       >
         <div style={{ position: "relative" }}>
           <SplideTrack>

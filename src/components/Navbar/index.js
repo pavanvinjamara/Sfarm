@@ -10,7 +10,7 @@ import ShoppingBag from "./assets/shopping-bag.png";
 import Hamburger from "../hamburger";
 
 function Navbar() {
-const [active, setActive] = useState(false);
+  const [active, setActive] = useState(false);
 
   const handleHamburger = () => {
     setActive(!active);
@@ -44,9 +44,7 @@ const [active, setActive] = useState(false);
         <img src={SframLogo} alt="logo" className="w-10 h-10 ml-2" />
       </div>
       <div className="w-fit h-full flex items-center">
-        <div>
-          <p>Pavan kumar</p>
-        </div>
+        <div></div>
         <img
           src={WishList}
           alt="logo"

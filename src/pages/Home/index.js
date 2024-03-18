@@ -22,42 +22,45 @@ function Home() {
     height: "15rem",
   };
   return (
-    <div className="overflow-hidden">
+    <div className="w-full h-full relative overflow-hidden">
       <Navbar />
-      <Splide
-        options={options}
-        aria-labelledby="autoplay-example-heading"
-        hasTrack={false}
-        className="!p-0"
-      >
-        <div style={{ position: "relative" }}>
-          <SplideTrack>
-            <SplideSlide>
-              <img
-                src="image1.jpg"
-                className="bg-red-500 h-full"
-                alt="Image 1"
-              />
-            </SplideSlide>
-            <SplideSlide>
-              <img
-                src="image2.jpg"
-                className="bg-yellow-500 h-full"
-                alt="Image 2"
-              />
-            </SplideSlide>
-            <SplideSlide>
-              <img
-                src="image3.jpg"
-                className="bg-slate-500 h-full"
-                alt="Image 3"
-              />
-            </SplideSlide>
-          </SplideTrack>
-        </div>
-      </Splide>
-      <div>Snehal</div>
-      <div>Zygal</div>
+
+      <main className="w-full h-full overflow-auto">
+        <Splide
+          options={options}
+          aria-labelledby="autoplay-example-heading"
+          hasTrack={false}
+          className="!p-0"
+        >
+          <div style={{ position: "relative" }}>
+            <SplideTrack>
+              <SplideSlide>
+                <img
+                  src="image1.jpg"
+                  className="bg-red-500 h-full"
+                  alt="Image 1"
+                />
+              </SplideSlide>
+              <SplideSlide>
+                <img
+                  src="image2.jpg"
+                  className="bg-yellow-500 h-full"
+                  alt="Image 2"
+                />
+              </SplideSlide>
+              <SplideSlide>
+                <img
+                  src="image3.jpg"
+                  className="bg-slate-500 h-full"
+                  alt="Image 3"
+                />
+              </SplideSlide>
+            </SplideTrack>
+          </div>
+        </Splide>
+        <div className="w-full h-[500px]">Snehal</div>
+        <div>Zygal</div>
+      </main>
     </div>
   );
 }

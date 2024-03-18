@@ -7,7 +7,7 @@ import "./App.scss";
 
 function App() {
   return (
-    <div className="App m-0 p-0 w-screen h-screen bg-gradient-to-b from-green-50 from-0% to-[transparent] to-35%">
+    <div className="App m-0 p-0 w-screen h-screen bg-gradient-to-b from-green-100 from-0% to-[transparent] to-35%">
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />

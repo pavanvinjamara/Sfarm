@@ -70,7 +70,9 @@ function Navbar() {
             )}
           </div>
           <hr
-            className={`w-[1.5px] h-2.5 absolute bottom-0 right-1 -rotate-45 bg-[#15864c]`}
+            className={`w-[1.5px] h-2.5 absolute -rotate-45 bg-[#15864c] ${
+              searchActive ? "" : "bottom-0 right-1"
+            }`}
           ></hr>
           {/* <hr className="w-px h-2.5 absoulte bottom-0 right-0 rotate-45 bg-[#15864c]"></hr> */}
         </div>

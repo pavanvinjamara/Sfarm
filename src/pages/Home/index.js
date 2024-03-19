@@ -11,6 +11,7 @@ import "@splidejs/react-splide/css/sea-green";
 // or only core styles
 import "@splidejs/react-splide/css/core";
 import Navbar from "../../components/Navbar";
+import Slider from "../../components/Slider";
 function Home() {
   const options = {
     arrows: false,
@@ -21,6 +22,11 @@ function Home() {
     resetProgress: false,
     height: "15rem",
   };
+
+  const handleChange = (event) => {
+    console.log(11111111111111111)
+
+    }
   return (
     <div className="w-full h-full relative overflow-hidden">
       <Navbar />
@@ -58,9 +64,10 @@ function Home() {
             </SplideTrack>
           </div>
         </Splide>
-        <div className="w-full h-[500px]">Snehal</div>
-        <div>Zygal</div>
+        <button onClick={handleChange}>Slider</button>
+
       </main>
+      {/* <Slider></Slider> */}
     </div>
   );
 }

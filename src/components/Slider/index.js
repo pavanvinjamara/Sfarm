@@ -1,10 +1,27 @@
-import React from "react";
-import "./index.scss";
+import React, { useState } from 'react';
+import './index.scss'; // Import CSS for styling
 
-const Slider = () => {
-    return  <div className="absolute h-full w-full top-0 left-0 z-50">
-            <h1>Slider component</h1>   
-            </div>
-}
+const Slider = ({ title, direction, visible, onClose }) => {
+  const [closed, setClosed] = useState(true);
+
+  const handleClose = () => {
+    setClosed(true);
+    onClose();
+  };
+
+  const SliderClassName = `Slider ${direction} ${closed ? 'closed' : 'open'}`;
+
+  return (
+    <div className={SliderClassName}>
+      <div className="Slider-header">
+        <span>{title}</span>
+        <button className="close-button" onClick={handleClose}>
+          &times;
+        </button>
+      </div>
+      <div className="Slider-content">{visible && <span>Hi, there!</span>}</div>
+    </div>
+  );
+};
 
 export default Slider;

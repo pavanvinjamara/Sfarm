@@ -18,9 +18,9 @@ const Slider = ({ title, direction, visible, onClose }) => {
         <button className="close-button" onClick={handleClose}>
           &times;
         </button>
-      </div>
+      </div><div>snehal</div>
       <div className="Slider-content">{visible && <span>Hi, there!</span>}</div>
-    </div>
+    </div>   
   );
 };
 

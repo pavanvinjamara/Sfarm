@@ -39,6 +39,7 @@ function Home() {
           className="!p-0"
         >
           <div style={{ position: "relative" }}>
+            <div>snehaha</div>
             <SplideTrack>
               <SplideSlide>
                 <img

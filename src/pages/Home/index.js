@@ -32,10 +32,10 @@ function Home() {
       sliderRef.current.handleShowSlider();
   }
   return (
-    <div className="w-full h-full relative overflow-hidden">
-      <Navbar forwardedRef={childRef}/>
+    <div className="w-full h-full relative overflow-hidden z-10">
+      <Navbar forwardedRef={sliderRef}/>
 
-      <main className="w-full h-full overflow-auto" onClick={handleChange}>
+      <main className="w-full h-full overflow-auto" >
         <Splide
           options={options}
           aria-labelledby="autoplay-example-heading"

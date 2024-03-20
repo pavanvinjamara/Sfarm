@@ -9,14 +9,15 @@ import ShoppingBag from "./assets/shopping-bag.png";
 // Components
 import Hamburger from "../hamburger";
 
-function Navbar({ forwardedRef}) {
+const Navbar = ({ forwardedRef }) => {
   const [active, setActive] = useState(false);
   const [searchActive, setSearchActive] = useState(false);
 
   const handleHamburger = () => {
     setActive(!active);
+    console.log(forwardedRef.current);
     if(forwardedRef.current){
-        forwardedRef.current.childFunction();
+        forwardedRef.current.handleShowSlider();
     }
   };
 
@@ -27,13 +28,13 @@ function Navbar({ forwardedRef}) {
     <div className="w-full h-30 flex justify-between items-center py-2.5 px-4">
       <div className="w-fit h-full flex items-center">
         <div
-          className="w-fit h-fit flex flex-col relative cursor-pointer"
+          className="w-fit h-fit flex flex-col relative cursor-pointer z-[100]"
           onClick={handleHamburger}
         >
           <span
             className={`h-0.5 mb-1 rounded-md bg-[#15864c] transform duration-100 ease-linear ${
               active
-                ? "-rotate-45 absoulte left-0 w-2 translate-y-1"
+                ? "-rotate-45 absoulte left-0 w-2 translate-y-[3px]"
                 : "w-6 rotate-0"
             }`}
           ></span>

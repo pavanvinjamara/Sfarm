@@ -33,7 +33,7 @@ function Home() {
   }
   return (
     <div className="w-full h-full relative overflow-hidden">
-      <Navbar />
+      <Navbar forwardedRef={childRef}/>
 
       <main className="w-full h-full overflow-auto" onClick={handleChange}>
         <Splide
@@ -71,7 +71,7 @@ function Home() {
         {/* <button onClick={handleChange} >Slider</button> */}
 
       </main>
-      <Slider ref={sliderRef} ></Slider>
+      <Slider ref={sliderRef} />
     </div>
   );
 }

@@ -9,12 +9,15 @@ import ShoppingBag from "./assets/shopping-bag.png";
 // Components
 import Hamburger from "../hamburger";
 
-function Navbar() {
+function Navbar({ forwardedRef}) {
   const [active, setActive] = useState(false);
   const [searchActive, setSearchActive] = useState(false);
 
   const handleHamburger = () => {
     setActive(!active);
+    if(forwardedRef.current){
+        forwardedRef.current.childFunction();
+    }
   };
 
   const handleSearch = () => {

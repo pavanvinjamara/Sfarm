@@ -1,4 +1,4 @@
-import React from "react";
+import  React , { useRef} from "react";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 // Default theme
 import "@splidejs/react-splide/css";
@@ -22,16 +22,20 @@ function Home() {
     resetProgress: false,
     height: "15rem",
   };
+    
+  const sliderRef = useRef();
 
-  const handleChange = (event) => {
-    console.log(11111111111111111)
-
-    }
+  const handleChange = () => {
+    console.log(1111111111111)
+    console.log(sliderRef)
+    if(sliderRef.current)
+      sliderRef.current.handleShowSlider();
+  }
   return (
     <div className="w-full h-full relative overflow-hidden">
       <Navbar />
 
-      <main className="w-full h-full overflow-auto">
+      <main className="w-full h-full overflow-auto" onClick={handleChange}>
         <Splide
           options={options}
           aria-labelledby="autoplay-example-heading"
@@ -39,7 +43,6 @@ function Home() {
           className="!p-0"
         >
           <div style={{ position: "relative" }}>
-            <div>snehaha</div>
             <SplideTrack>
               <SplideSlide>
                 <img
@@ -65,10 +68,10 @@ function Home() {
             </SplideTrack>
           </div>
         </Splide>
-        <button onClick={handleChange}>Slider</button>
+        {/* <button onClick={handleChange} >Slider</button> */}
 
       </main>
-      {/* <Slider></Slider> */}
+      <Slider ref={sliderRef} ></Slider>
     </div>
   );
 }

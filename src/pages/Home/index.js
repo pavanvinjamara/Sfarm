@@ -71,7 +71,9 @@ function Home() {
         {/* <button onClick={handleChange} >Slider</button> */}
 
       </main>
-      <Slider ref={sliderRef} />
+      <Slider ref={sliderRef}>
+        <div>snehal</div>
+      </Slider>
     </div>
   );
 }

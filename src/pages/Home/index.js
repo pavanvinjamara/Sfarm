@@ -97,7 +97,7 @@ function Home() {
     <div className="w-full h-full relative overflow-hidden z-10">
       <Navbar forwardedRef={sliderRef}/>
 
-      <main className="w-full h-full overflow-auto" >
+      <main className="w-full h-full overflow-auto z-10" >
         <Splide
           options={options}
           aria-labelledby="autoplay-example-heading"
@@ -133,7 +133,7 @@ function Home() {
         {/* <button onClick={handleChange} >Slider</button> */}
 
       </main>
-      <Slider ref={sliderRef} >
+      <Slider ref={sliderRef} width="75%" direction="right" >
         <div className="w-full h-full pt-12">
           <div className="flex justify-between items-center w-full px-4 ">
             <div className="w-full">
@@ -145,9 +145,7 @@ function Home() {
             </div>
           </div>
           <section className="w-full h-full">
-              {/* {navigationOption.map((name) => (
-                  {name}
-              ))} */}
+             
           </section>
         </div>
         

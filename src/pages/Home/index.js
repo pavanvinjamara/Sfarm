@@ -12,6 +12,10 @@ import "@splidejs/react-splide/css/sea-green";
 import "@splidejs/react-splide/css/core";
 import Navbar from "../../components/Navbar";
 import Slider from "../../components/Slider";
+
+// user logo
+import Userlogo from "./assets/slider/user.png";
+
 function Home() {
   const options = {
     arrows: false,
@@ -22,6 +26,64 @@ function Home() {
     resetProgress: false,
     height: "15rem",
   };
+
+  const greetings = [
+    "Hello!", 
+    "Hi there!", 
+    "Welcome!", 
+    "Hey!", 
+    "Greetings!", 
+    // "Good to see you!", 
+    "What's up?", 
+    "Howdy!", 
+    "Salutations!",
+    // "Hey, how's it going?",
+    // "Nice to see you!",
+    // "Hey, good to have you here!",
+    "Yo!",
+    "Hiya!",
+    "Hola!",
+    "Bonjour!",
+    "Ciao!",
+    "Namaste!"
+  ];
+
+  const names = [
+    "Snehal", 
+    "Pavan", 
+    "Surya", 
+    "Shyam", 
+    "Tejas", 
+    "Rushikesh", 
+    "Somnath", 
+    "Vinay", 
+    "Shivani",
+    "Sakshi",
+    "Devevndra",
+    "Nikhil",
+    "Divyash",
+    "Vishwa ",
+    "Vihar",
+    "Chirag",
+    "Abhishek",
+    "Shubham",
+    "Aparna"
+  ];
+
+  const navigationOption = ['Home','Smart Basket \ My List','Shop By Category','Offers'
+    
+    // {name:"HOME"},
+    // {name:"Smart Basket \ My List"},
+    // {name:"Shop By Category"},
+    // {name:"Offers"},
+    // {name:"The Beauty Store"},
+    // {name:"Bb Lifestyle"}
+  ];
+
+  // Selecting a random greeting
+  const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+
+  const randomNames = names[Math.floor(Math.random() * names.length)];
     
   const sliderRef = useRef();
 
@@ -71,8 +133,24 @@ function Home() {
         {/* <button onClick={handleChange} >Slider</button> */}
 
       </main>
-      <Slider ref={sliderRef}>
-        <div>snehal</div>
+      <Slider ref={sliderRef} >
+        <div className="w-full h-full pt-12">
+          <div className="flex justify-between items-center w-full px-4 ">
+            <div className="w-full">
+              <p className="font-bold text-lg">{randomGreeting}</p>
+              <p className="font-normal text-xs text-slate-600">{randomNames}</p>
+            </div>
+            <div className="ml-1 flex-none w-14 h-14 border border-px border-[#15864c] rounded-full flex justify-center items-center">
+              <img src={Userlogo} className="w-7 h-7" alt="default pic"></img>
+            </div>
+          </div>
+          <section className="w-full h-full">
+              {/* {navigationOption.map((name) => (
+                  {name}
+              ))} */}
+          </section>
+        </div>
+        
       </Slider>
     </div>
   );

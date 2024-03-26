@@ -13,7 +13,7 @@ const Slider = React.forwardRef(( props , ref ) => {
    };
     React.useImperativeHandle(ref, () => ({handleShowSlider}))
     return  (
-            <div className={`absolute h-full w-full top-0 left-0 ${showSlider ? 'z-45' : ' delay-1000 -z-10 '}`}>
+            <div className={`absolute h-full w-full top-0 left-0 ${showSlider ? 'z-45' : 'delay-1000 -z-10 '}`}>
               <div className={`w-full h-full absolute top-0  transition-all ease-linear duration-500  backdrop-brightness-50 bg-white/30 ${
                       showSlider ? "opacity-100 z-40 scale-100" : "opacity-0 delay-100 -z-10"
                     } `} onClick={handleShowSlider}> 

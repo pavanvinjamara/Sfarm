@@ -16,8 +16,8 @@ const Navbar = ({ forwardedRef }) => {
   const handleHamburger = () => {
     setActive(!active);
     console.log(forwardedRef.current);
-    if(forwardedRef.current){
-        forwardedRef.current.handleShowSlider();
+    if (forwardedRef.current) {
+      forwardedRef.current.handleShowSlider();
     }
   };
 
@@ -49,7 +49,7 @@ const Navbar = ({ forwardedRef }) => {
             }`}
           ></span>
         </div>
-        <img src={SframLogo} alt="logo" className="w-10 h-10 ml-2" />
+        {/* <img src={SframLogo} alt="logo" className="w-10 h-10 ml-2" /> */}
       </div>
       <div className="w-full h-full flex items-center">
         <div
@@ -57,7 +57,7 @@ const Navbar = ({ forwardedRef }) => {
           onClick={handleSearch}
         >
           <div
-            className={`border border-[1px] border-[#15864c] transition-all duration-100 ease-linear ${
+            className={`border border-[1px] border-[#15864c] transition-all duration-200 ease-linear ${
               searchActive
                 ? "w-full h-6 rounded-md flex grow"
                 : "w-5 h-5 rounded-full"
@@ -74,11 +74,17 @@ const Navbar = ({ forwardedRef }) => {
             )}
           </div>
           <hr
-            className={`w-[1.5px] h-2.5 absolute -rotate-45 bg-[#15864c] ${
-              searchActive ? "" : "bottom-0 right-1"
+            className={`w-[1.5px] h-2.5 absolute -rotate-45 bg-[#15864c] transition-all ease-linear duration-500 ${
+              searchActive ? "right-4 bottom-3" : "bottom-0 right-1"
             }`}
           ></hr>
-          {/* <hr className="w-px h-2.5 absoulte bottom-0 right-0 rotate-45 bg-[#15864c]"></hr> */}
+          <hr
+            className={`w-px h-2.5 absolute rotate-45 bg-[#15864c] transition-all ease-linear duration-300 ${
+              searchActive
+                ? "opacity-100 right-4 bottom-3"
+                : "opacity-0 bottom-3 right-1"
+            }`}
+          ></hr>
         </div>
         {/* <img
 					src={WishList}
@@ -89,6 +95,6 @@ const Navbar = ({ forwardedRef }) => {
       </div>
     </div>
   );
-}
+};
 
 export default Navbar;

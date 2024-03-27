@@ -24,6 +24,7 @@ const Slider = React.forwardRef(( props , ref ) => {
                     } transition-all ease-linear duration-300 z-50 bg-white ${showSlider ? 'translate-x-0 ': '-translate-x-full'} `}>
                        {children}
                        <div>snehallllll</div>
+                       <div>Pavan</div>
               </div>
              
             </div>

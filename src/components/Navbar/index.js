@@ -16,8 +16,8 @@ const Navbar = ({ forwardedRef }) => {
   const handleHamburger = () => {
     setActive(!active);
     console.log(forwardedRef.current);
-    if(forwardedRef.current){
-        forwardedRef.current.handleShowSlider();
+    if (forwardedRef.current) {
+      forwardedRef.current.handleShowSlider();
     }
   };
 
@@ -74,11 +74,17 @@ const Navbar = ({ forwardedRef }) => {
             )}
           </div>
           <hr
-            className={`w-[1.5px] h-2.5 absolute -rotate-45 bg-[#15864c] ${
-              searchActive ? "" : "bottom-0 right-1"
+            className={`w-[1.5px] h-2.5 absolute -rotate-45 bg-[#15864c] transition-all duration-300 ease-linear ${
+              searchActive ? "bottom-3 right-[18px]" : "bottom-0 right-1"
             }`}
           ></hr>
-          {/* <hr className="w-px h-2.5 absoulte bottom-0 right-0 rotate-45 bg-[#15864c]"></hr> */}
+          <hr
+            className={`w-[1.5px] h-2.5 absolute rotate-45 bg-[#15864c] transition-all duration-100 ease-linear ${
+              searchActive
+                ? "top-2 right-[18px] opacity-100"
+                : "top-0 right-0 opacity-0"
+            }`}
+          ></hr>
         </div>
         {/* <img
 					src={WishList}
@@ -89,6 +95,6 @@ const Navbar = ({ forwardedRef }) => {
       </div>
     </div>
   );
-}
+};
 
 export default Navbar;

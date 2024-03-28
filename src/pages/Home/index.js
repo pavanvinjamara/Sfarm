@@ -133,7 +133,7 @@ function Home() {
         {/* <button onClick={handleChange} >Slider</button> */}
 
       </main>
-      <Slider ref={sliderRef} width="75%" direction="right" >
+      <Slider ref={sliderRef} width="75%" direction="left" >
         <div className="w-full h-full pt-12">
           <div className="flex justify-between items-center w-full px-4 ">
             <div className="w-full">
